@@ -1,4 +1,3 @@
-
 private int smallestCircles = 10; 
 private int gap =12;
 private int hard= 3;
@@ -10,10 +9,8 @@ public void draw()
   if(gap>30)
   gap=12;*/
   gap= (int)(Math.random()*80)+7;
-  
-  background((float)Math.random()*255);
+  background((float)Math.random()*255,(float)Math.random()*255,(float)Math.random()*255);
   strokeWeight(hard); 
-
   stroke(255);
   drawCircles1(150,200,300);  
    drawCircles2(450,200,300);  
@@ -21,9 +18,9 @@ public void draw()
 public void drawCircles1(int x,int y,int z) 
 {z=z-gap;
 
-fill(255);
+fill((float)Math.random()*255,(float)Math.random()*255,(float)Math.random()*255);
 ellipse(x,y,z,z);
-fill(0);
+fill((float)Math.random()*255,(float)Math.random()*255,(float)Math.random()*255);
 ellipse(x,y,z,z);
 if (z > smallestCircles)
 { drawCircles1(x,y,z);}
@@ -31,9 +28,9 @@ if (z > smallestCircles)
 public void drawCircles2(int x,int y,int z) 
 {z=z-gap;
 stroke(0);
-fill(0);
+fill((float)Math.random()*255,(float)Math.random()*255,(float)Math.random()*255);
 ellipse(x,y,z,z);
-fill(255);
+fill((float)Math.random()*255,(float)Math.random()*255,(float)Math.random()*255);
 ellipse(x,y,z,z);
 if (z > smallestCircles)
 { drawCircles2(x,y,z);}
